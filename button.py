@@ -4,10 +4,8 @@ import pygame
 class Button:
     def __init__(self, game):
         self.settings = game.settings
+        self.screen = game.screen
 
-        self.screen = pygame.display.set_mode(
-            (self.settings.screen_width, self.settings.screen_height)
-        )
         self.r_btn = pygame.image.load("img/rock.png").convert_alpha()
         self.p_btn = pygame.image.load("img/paper.png").convert_alpha()
         self.s_btn = pygame.image.load("img/scissors.png").convert_alpha()
